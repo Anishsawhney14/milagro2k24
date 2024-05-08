@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MILAGRO 2K24</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+    <style>
+        *{
+    margin:0;
+    padding:0;
+}
+:root{
+    --navbar-height:59px;
+}
+#navbar{
+    display:flex;
+    align-items:center;
+    position:relative;
+    top:0px;
+    left:0px;
+}
+#logo{
+    margin:10px 34px;
+
+}
+#logo img{
+    margin:3px 6px;
+    height:59px;
+}
+
+#navbar ul{
+    display:flex;
+   
+}
+#navbar::before{
+    content: "";
+    background-color:black;
+    position:absolute;
+    height:100%;
+    width:100%;
+    z-index:-1;
+    opacity:0.4;
+    
+}
+#navbar ul li{
+    list-style:none;
+    font-size:1.3rem;
+}
+#navbar ul li a{
+    color:white;
+    display:block;
+    padding:3px 22px;
+    border-radius:20px;
+    text-decoration:none;
+}
+#navbar ul li a:hover{
+    color:blue;
+    background-color:white;
+}
+#home{
+    display:flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height:723px;
+    justify-content:center;
+    align-items:center;
+}
+
+#home::before{
+    content: "";
+    background:url('green.jpeg') no-repeat center center/cover;
+    position:absolute;
+    height:110%;
+    width:100%;
+    z-index:-1;
+    opacity:0.89;
+    top:0px;
+    left:0px;
+}
+
+#home h1{
+    color:white;
+    text-align:center;
+    font-family: "Briem Hand", cursive;
+}
+
+#home p{
+    color:white;
+    text-align:center;
+    font-size:1.5rem;
+    font-family: "Briem Hand", cursive; 
+    
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    box-sizing: border-box;
+    color:white;
+    
+}
+
+.flex-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.background-container {
+    background-image: url(greenish.jpg);
+    
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 120px; /* Adjust padding as needed */
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Adjust gap between flex boxes */
+}
+
+
+.flex-box {
+    
+    display:flex;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(purple,red);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 50px;
+    padding: 20px;
+    position: relative;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    perspective: 1000px; /* Add perspective for 3D effect */
+}
+.flex-box .hidden-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s; /* Add transition effect */
+}
+
+
+.flex-box.active .hidden-text {
+    display: none; /* Hide hidden text when .flex-box has active class */
+    transition: opacity }
+
+
+
+
+.flex-box img {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.flex-box p {
+    margin-bottom: 20px;
+}
+
+
+.flex-box button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.flex-box .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    transform: rotateY(180deg); /* Initially hide the back side */
+    border-radius: 20px;
+    background: #333; /* Change background color of back side */
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.flex-box button:hover {
+    background-color: lightgray;
+    color: black;
+}
+.flex-box:hover .hidden-text {
+    opacity: 0; /* Hide hidden text on hover */
+}
+
+.flex-box:hover .image {
+    transform: rotateY(180deg); /* Flip on hover */
+    filter: blur(2px); /* Apply blur on hover */
+}
+.flex-box .image {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.6s, filter 0.4s ease-out; /* Add transitions */
+}
+
+.body-text {
+    display: none; /* Initially hide the body text */
+}
+
+.h-primary {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 30px;
+    color: #333; /* Adjust the color as needed */
+    font-weight: bold;
+}
+
+
+
+
+
+#sponsors {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.sponsor-item {
+    padding: 34 px; 
+}
+#sponsors img {
+    height: 138px;
+    
+    
+    
+}
+#uvce-item{
+    padding:20px 20px;
+    font-size:20px;
+    color:white;
+}
+
+
+
+#about-uvce {
+    height: 533px;
+}
+.h-primary{
+    font-size: 36px;
+    margin-bottom: 20px;
+
+}
+#uvce{
+        font-family: "YourUniqueFontName", Arial, sans-serif; /* Change "YourUniqueFontName" to the name of your desired font */
+    }
+#about-uvce::before{
+    content:" ";
+    position: absolute;
+    background: url(greenish.jpg)no-repeat center center/cover;
+    width: 100%;
+    height: 250%;
+    z-index: -1;
+    opacity: 90;
+}
+.h-primary{
+    font-size: 36px;
+    margin-bottom: 20px;
+    color:white;
+}
+.flex-item{
+    padding:34px;
+}
+#fest{
+    display:flex;
+    justify-content:centre;
+    flex-wrap:wrap;
+    
+}
+
+
+
+
+
+
+/* Style for the images */
+.fest-item img {
+    display: flex;
+
+    display: flex;
+    height: 200px;
+    margin:70px;
+}
+#milagro-item{
+    margin:10px 10px 10px 10px;
+    background:url(greenish.jpg) ;
+    margin:20%
+
+}
+#fest-glimpse::before {
+    content: " ";
+    position: absolute;
+    background: url(greenish.jpg)no-repeat center center/cover;
+    width: 100%;
+    height: 390%;
+    z-index: -1;
+    opacity: 90;
+    margin-top:20px;
+}
+
+
+
+.h-primary{
+    font-size:3.8rem;
+    padding:54px;
+    font-family: "Briem Hand", cursive;
+    margin-top:90px;
+}
+
+.h-secondary{
+    font-family: "Briem Hand", cursive;
+    font-size:2.8rem;
+    padding:12px;
+}
+
+.btn{
+    padding:6px 20px;
+    border:2px solid black;
+    background-color:grey;
+    color:white;
+    margin:17px;
+    font-size:0.8rem;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.center{
+    text-align:center;
+}
+.btns{
+    padding:6px 20px;
+    border:2px solid black;
+    background-color:grey;
+    color:white;
+    margin:17px;
+    font-size:0.8rem;
+    border-radius:10px;
+    cursor:pointer;
+}
+#contacts{
+    margin-top:260px;
+    margin-bottom:350px;
+    margin-left:350px;
+    font-size:34px;
+    padding: 10px 0px 0px 0px;
+    color:white;
+
+}
+.contact-head{
+    margin-left:130px;
+    margin-bottom:20px;
+    font-size:60px;
+}
+#contacts{
+    font-size:40px;
+   
+}
+.contact-item{
+    text-align: center;
+    
+}
+.milagro-items{
+    margin:40px;
+   
+
+}
+#designers{
+    text-align:center;
+    margin-top:330px;
+    font-size:30px;
+    color:white;
+   
+}
+
+.flex-boxs .image {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.6s, filter 0.4s ease-out; /* Add transitions */
+}
+.flex-boxs:hover .image {
+    transform: rotateY(180deg); /* Flip on hover */
+    filter: blur(5px); /* Apply blur on hover */
+}
+.flex-boxs .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    transform: rotateY(180deg); /* Initially hide the back side */
+    border-radius: 20px;
+    background: #333; /* Change background color of back side */
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.flex-boxs button:hover {
+    background-color: lightgray;
+    color: black;
+}
+.flex-boxs:hover .hidden-text {
+    opacity: 0; /* Hide hidden text on hover */
+}
+
+.flex-boxs {
+    display:flex;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(purple,red);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 50px;
+    padding: 20px;
+    position: relative;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    perspective: 1000px; /* Add perspective for 3D effect */
+}
+.flex-boxs .hidden-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s; /* Add transition effect */
+}
+
+
+.flex-boxs.active .hidden-text {
+    display: none; /* Hide hidden text when .flex-box has active class */
+    transition: opacity }
+
+
+
+
+.flex-boxs img {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.flex-boxs p {
+    margin-bottom: 10px;
+}
+
+
+.flex-boxs button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    </style>
+
+    <script>// Get all the images in the flex-box
+        </script>
+
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo.png" alt="MyCollege.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">Events</a></li>
+            <li class="item"><a href="#">About Us</a></li>
+            <li class="item"><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary">MILAGRO-2K24</h1>
+        <p>Every year, UVCE hosts MILAGRO, the largest cultural event on campus. Over the 
+            course of two days, students from colleges across Bangalore and beyond come 
+            together to take part in a wide range of exciting activities and competitions. </p>
+        <p> MILAGRO is incredibly popular, drawing a huge crowd of students each year </p>
+        <button class="btn">Register Now</button>
+    </section>
+
+    <div class="background-container">
+
+    <h1 class="h-primary "> Flagship Events</h1>
+    <div class="flex-container">
+    <div class="flex-box">
+        <div class="hidden-text">Hidden text initially</div>
+        <img src="vinmiya poster.jpg" alt="Image" class="image">
+        <div class="info"></div>
+        <p>my name is dikshant</p>
+    </div>
+    <div class="flex-box">
+        <div class="hidden-text">Hidden text initially</div>
+        <img src="vinmiya poster.jpg" alt="Image" class="image">
+        <div class="info">Additional information about the picture.</div>
+    </div>
+    <div class="flex-box">
+        <div class="hidden-text">Hidden text initially</div>
+        <img src="vinmiya poster.jpg" alt="Image" class="image">
+        <div class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi mollitia est magnam nesciunt cupiditate distinctio placeat voluptate ut porro voluptas, maxime quasi praesentium earum esse veritatis inventore nulla quam hic!</div>
+    </div>
+    <div class="flex-box">
+        <div class="hidden-text">Hidden text initially</div>
+        <img src="vinmiya poster.jpg" alt="Image" class="image">
+        <div class="info">Additional information about the picture.</div>
+    </div>
+    <section>
+       
+    <h1 class="h-primary">General Event</h1>
+    <div class="flex-container">
+        <div class="flex-box">
+            <div class="hidden-text">Hidden text initially</div>
+               <img src="vinmiya poster.jpg" alt=""   class="image">
+                                   <div class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi mollitia est magnam nesciunt cupiditate distinctio placeat voluptate ut porro voluptas, maxime quasi praesentium earum esse veritatis inventore nulla quam hic!</div>
+        </div>
+        <div class="flex-box">
+            <div class="hidden-text">Hidden text initially</div>
+            <img src="vinmiya poster.jpg" alt="" class="image">
+        </div>
+        <div class="flex-box">
+            <div class="hidden-text">Hidden text initially</div>
+            <img src="vinmiya poster.jpg" alt="" class="image">
+        </div>
+        <div class="flex-box">
+            <div class="hidden-text">Hidden text initially</div>
+            <img src="vinmiya poster.jpg" alt="" class="image">
+        </div>
+        <div class="flex-box">
+            <div class="hidden-text">Hidden text initially</div>
+            <img src="vinmiya poster.jpg" alt=""   class="image">
+        </div>
+        <div class="flex-box">
+            <div class="hidden-text">Hidden text initially</div>
+            <img src="vinmiya poster.jpg" alt="" class="image">
+        </div>
+        <div class="flex-box">
+            <div class="hidden-text">Hidden text initially</div>
+            <img src="vinmiya poster.jpg" alt="" class="image">
+        </div>
+        <div class="flex-box">
+
+            <div class="hidden-text">Hidden text initially</div>
+            <img src="vinmiya poster.jpg" alt=""  class="image">
+        </div>
+        </div>
+    </section>
+    </div>
+    
+    <h1 class="h-primary">Gaming Events</h1>
+    <div class="flex-container">
+        <div class="flex-box">
+            <img src="vinmiya poster.jpg" alt="" class="image">
+
+        </div>
+        <div class="flex-box">
+            <img src="vinmiya poster.jpg" alt=""  class="image">
+           
+        </div>
+        <div class="flex-box">
+            <img src="vinmiya poster.jpg" alt="" class="image">
+
+        </div>
+    </div>
+    
+    </div>
+    
+
+</div>
+            
+    
+      </div>
+        
+    </section>
+ 
+    <section id="about-uvce">
+        <h1 class="h-primary center">About Milagro</h1>
+        <div id="uvce-item">
+            <p><h3>
+                Every year, UVCE hosts MILAGRO, the largest cultural event on campus. Over the 
+    course of two days, students from colleges across Bangalore and beyond come 
+    together to take part in a wide range of exciting activities and competitions. 
+    MILAGRO is incredibly popular, drawing a huge crowd of students each year. Its 
+    success is a testament to its widespread appeal and the enthusiasm it generates 
+    among attendees. People are captivated by the event and always eager for more.
+    The festival is a celebration of culture and creativity, providing students with a 
+    platform to showcase their talents and artistic abilities. From music and dance 
+    performances to art exhibitions and theater productions, MILAGRO offers 
+    something for everyone. It's more than just a festival; it's a chance for students to 
+    express themselves and demonstrate their skills. MILAGRO has become a highlight 
+    of the academic calendar, bringing people together and creating lasting memories 
+    for all who attend
+                </h3></p>
+            </p>
+        </div>
+    </section>
+    <section id="milagaro-section">
+        <h1 class="h-primary center">About UVCE</h1>
+        
+            
+<div class="milagro-item"> <p><h3>University of Visvesvaraya College of Engineering (UVCE), founded in 1917 by Bharat 
+    Ratna Awardee Sir M Visvesvaraya, is A State Autonomous Public University on IIT 
+    model that offers B.Tech., B.Arch., M.Tech. (Engineering), and Ph.D. degrees in the 
+    many engineering and architectural fields. After 100 years, this pioneering college 
+    has cemented its place as one of the most distinguished colleges in the nation 
+    which adopted the IIT model of learning in 2022, along with becoming an 
+    autonomous institution.With the tireless work of the students, the college hosts a lot of successful technical 
+    and non-technical activities. The college takes pleasure in its alumni's successful 
+    entrepreneurship endeavours, its students decision to pursue higher education, 
+    and the outstanding placements they receive each year</h3></p></div>
+           
+           
+        
+
+    </section>
+
+    <section id="fest-glimpse">
+        <h1 class="h-primary center">A Glimpse of our Fests</h1>
+        <div class="flex-container">
+        <div id="fest">
+
+            <div class="fest-item">
+                <img src="fest1.jpeg" alt="Our fest">
+            </div>
+            <div class="fest-item">
+                <img src="fest 2.jpeg" alt="Our fest">
+            </div>
+            <div class="fest-item">
+                <img src="fest 3.jpeg" alt="Our fest">
+            </div>
+            <div class="fest-item">
+                <img src="fest4.jpeg" alt="Our fest">
+            </div>
+            <div class="fest-item">
+                <img src="fest5.jpg" alt="Our fest">
+            </div>
+            <div class="fest-item">
+                <img src="fest6.jpg" alt="Our fest">
+            </div>
+            <div class="fest-item">
+                <img src="fest7.jpg" alt="Our fest">
+            </div>
+            <div class="fest-item">
+                <img src="fest8.jpg" alt="Our fest">
+            </div>
+            <div class="fest-item">
+                <img src="fest9.jpg" alt="Our fest">
+            </div>
+            <div class="fest-item">
+                <img src="fest10.jpg" alt="Our fest">
+            </div>
+            <div class="fest-item">
+                <img src="fest11.jpg" alt="Our fest">
+            </div>
+            <div class="fest-item">
+                <img src="fest12.jpg" alt="Our fest">
+            </div>
+           
+            </div>
+            </section>
+            
+                <div id="contacts">
+                    <div class="contact-head"><h3>Contact Us:</h3></div>
+                    <div id="contact-item">
+                        Chidambara Nadig : +91 94830 99572
+                    </div>
+                    <div class="contact-item2">
+                        Prajwal Awar  : +91 94822 02057
+                    </div>
+                </div>
+            </div>
+            <div id="designers">Designed By
+                <div class="designer1">Anish Sawhney
+
+                </div>
+                <div class="designer2">Dikshant Sharma</div>
+            </div>
+
+
+</body>
+</html>
